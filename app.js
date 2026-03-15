@@ -83,6 +83,7 @@
   }
 
   // --- Contact Form (no backend, just UX) ---
+  /*
   const contactForm = document.querySelector('#contact-form');
   if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
@@ -100,5 +101,5 @@
       }, 3000);
     });
   }
-
+*/
 })();
