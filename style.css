@@ -502,7 +502,7 @@ h4 { font-size: var(--text-base); font-weight: 600; }
 .hero {
   position: relative;
   padding-block: clamp(var(--space-16), 12vw, var(--space-32));
-  overflow: hidden;
+ /* overflow: hidden;  <-- remove this line */
 }
 
 .hero-bg {
