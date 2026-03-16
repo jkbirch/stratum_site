@@ -29,18 +29,33 @@
   }
 
   // --- Mobile Menu ---
-  const menuBtn = document.querySelector('.mobile-menu-btn');
-  const mobileNav = document.querySelector('.mobile-nav');
+const menuBtn = document.querySelector('.mobile-menu-btn');
+const mobileNav = document.querySelector('.mobile-nav');
 
-  if (menuBtn && mobileNav) {
-    menuBtn.addEventListener('click', function() {
-      const isOpen = mobileNav.classList.toggle('open');
-      menuBtn.setAttribute('aria-expanded', isOpen);
-      menuBtn.innerHTML = isOpen
-        ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>'
-        : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>';
-    });
-  }
+if (menuBtn && mobileNav) {
+  // Ensure we start closed
+  mobileNav.classList.remove('is-open');
+  mobileNav.classList.add('is-closed');
+  menuBtn.setAttribute('aria-expanded', 'false');
+
+  menuBtn.addEventListener('click', function() {
+    const isOpen = mobileNav.classList.contains('is-open');
+
+    if (isOpen) {
+      mobileNav.classList.remove('is-open');
+      mobileNav.classList.add('is-closed');
+      menuBtn.setAttribute('aria-expanded', 'false');
+      menuBtn.innerHTML =
+        '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>';
+    } else {
+      mobileNav.classList.remove('is-closed');
+      mobileNav.classList.add('is-open');
+      menuBtn.setAttribute('aria-expanded', 'true');
+      menuBtn.innerHTML =
+        '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>';
+    }
+  });
+}
 
   // --- Sticky Header Scroll ---
   const header = document.querySelector('.site-header');
