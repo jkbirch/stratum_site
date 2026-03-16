@@ -347,14 +347,25 @@ h4 { font-size: var(--text-base); font-weight: 600; }
 /* Mobile nav panel */
 .mobile-nav {
   display: none;
-  position: fixed;
-  inset: 72px 0 0 0;
-  background: var(--color-bg);
-  padding: var(--space-6) var(--space-4);
-  z-index: 49;
+}
+
+/* Closed state (default) */
+.mobile-nav.is-closed {
+  display: none;
+}
+
+/* Open state – full-screen overlay */
+.mobile-nav.is-open {
+  display: flex;
   flex-direction: column;
+  position: fixed;
+  inset: 0; /* full viewport, not just below header */
+  background: #ffffff; /* or var(--color-bg) if you prefer darker */
+  padding: var(--space-6) var(--space-4);
   gap: var(--space-2);
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  z-index: 9999;
 }
 
 .mobile-nav.open { display: flex; }
