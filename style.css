@@ -1042,3 +1042,29 @@ h4 { font-size: var(--text-base); font-weight: 600; }
     flex: 1 1 auto;
   }
 }
+
+/* === FINAL OVERRIDE: lock mobile nav over everything === */
+@media (max-width: 899.98px) {
+  body {
+    position: relative;
+  }
+
+  .mobile-nav.is-open {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    margin: 0 !important;
+    padding: var(--space-6) var(--space-4) !important;
+    background: #ffffff !important;
+    z-index: 99999 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  .he
