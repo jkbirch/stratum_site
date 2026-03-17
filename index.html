@@ -39,7 +39,10 @@
 
     <div style="display:flex;align-items:center;gap:var(--space-2);">
       <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme" style="display:none;"></button>
-      <button class="mobile-menu-btn" aria-label="Open navigation" aria-expanded="false">
+     <button class="mobile-menu-btn"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        data-state="closed">
   <span class="mobile-menu-icon" aria-hidden="true">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
          stroke="currentColor" stroke-width="2">
@@ -47,6 +50,7 @@
     </svg>
   </span>
 </button>
+
 
   <nav class="mobile-nav is-closed" aria-label="Mobile navigation">
     <a href="./index.html" class="nav-link">Home</a>

@@ -38,39 +38,57 @@ if (menuBtn && mobileNav) {
   mobileNav.classList.add('is-closed');
   menuBtn.setAttribute('aria-expanded', 'false');
   menuBtn.setAttribute('aria-label', 'Open navigation');
+  menuBtn.innerHTML =
+    '<span class="mobile-menu-icon" aria-hidden="true">' +
+    '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" ' +
+    'stroke="currentColor" stroke-width="2">' +
+    '<path d="M3 12h18M3 6h18M3 18h18"/>' +
+    '</svg>' +
+    '</span>';
 
+  function setClosedState() {
+    mobileNav.classList.remove('is-open');
+    mobileNav.classList.add('is-closed');
+    menuBtn.setAttribute('aria-expanded', 'false');
+    menuBtn.setAttribute('aria-label', 'Open navigation');
+    menuBtn.innerHTML =
+      '<span class="mobile-menu-icon" aria-hidden="true">' +
+      '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" ' +
+      'stroke="currentColor" stroke-width="2">' +
+      '<path d="M3 12h18M3 6h18M3 18h18"/>' +
+      '</svg>' +
+      '</span>';
+  }
+
+  function setOpenState() {
+    mobileNav.classList.remove('is-closed');
+    mobileNav.classList.add('is-open');
+    menuBtn.setAttribute('aria-expanded', 'true');
+    menuBtn.setAttribute('aria-label', 'Close navigation');
+    menuBtn.innerHTML =
+      '<span class="mobile-menu-icon" aria-hidden="true">' +
+      '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" ' +
+      'stroke="currentColor" stroke-width="2">' +
+      '<path d="M6 6l12 12M6 18L18 6"/>' +
+      '</svg>' +
+      '</span>';
+  }
+
+  // Toggle on button click
   menuBtn.addEventListener('click', function() {
     const isOpen = mobileNav.classList.contains('is-open');
-
     if (isOpen) {
-      // Close menu
-      mobileNav.classList.remove('is-open');
-      mobileNav.classList.add('is-closed');
-      menuBtn.setAttribute('aria-expanded', 'false');
-      menuBtn.setAttribute('aria-label', 'Open navigation');
-      // Hamburger icon
-      menuBtn.innerHTML =
-        '<span class="mobile-menu-icon" aria-hidden="true">' +
-        '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" ' +
-        'stroke="currentColor" stroke-width="2">' +
-        '<path d="M3 12h18M3 6h18M3 18h18"/>' +
-        '</svg>' +
-        '</span>';
+      setClosedState();
     } else {
-      // Open menu
-      mobileNav.classList.remove('is-closed');
-      mobileNav.classList.add('is-open');
-      menuBtn.setAttribute('aria-expanded', 'true');
-      menuBtn.setAttribute('aria-label', 'Close navigation');
-      // X icon
-      menuBtn.innerHTML =
-        '<span class="mobile-menu-icon" aria-hidden="true">' +
-        '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" ' +
-        'stroke="currentColor" stroke-width="2">' +
-        '<path d="M6 6l12 12M6 18L18 6"/>' +
-        '</svg>' +
-        '</span>';
+      setOpenState();
     }
+  });
+
+  // Auto-close when any mobile nav link (or Contact button) is clicked
+  mobileNav.querySelectorAll('.nav-link, .btn').forEach(function(link) {
+    link.addEventListener('click', function() {
+      setClosedState();
+    });
   });
 }
 
