@@ -1044,7 +1044,7 @@ h4 { font-size: var(--text-base); font-weight: 600; }
 }
 
 /* === FINAL OVERRIDE: lock mobile nav over everything === */
-@media (max-width: 899.98px) {
+@media (max-width: 899.98px) {}
   body {
     position: relative;
   }
@@ -1066,5 +1066,3 @@ h4 { font-size: var(--text-base); font-weight: 600; }
     overflow-y: auto !important;
     -webkit-overflow-scrolling: touch !important;
   }
-
-  .he
