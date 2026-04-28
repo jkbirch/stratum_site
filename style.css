@@ -862,6 +862,76 @@ h4 { font-size: var(--text-base); font-weight: 600; }
   color: var(--color-text-muted);
   max-width: 56ch;
 }
+/* --- Long-form Guide Content --- */
+.guide-content {
+  max-width: 72ch;
+  margin: 0 auto;
+  font-size: var(--text-base);
+  line-height: 1.7;
+}
+
+.guide-content > section + section {
+  margin-top: var(--space-12);
+}
+
+.guide-content h2 {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-bottom: var(--space-3);
+}
+
+.guide-content h3 {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-2);
+}
+
+.guide-content p {
+  margin-bottom: var(--space-3);
+  color: var(--color-text);
+}
+
+.guide-content p + p {
+  margin-top: var(--space-1);
+}
+
+.guide-content ul,
+.guide-content ol {
+  margin: var(--space-2) 0 var(--space-4);
+  padding-left: var(--space-5);
+}
+
+.guide-content li {
+  margin-bottom: var(--space-1);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.guide-content strong {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.guide-content a {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+.guide-content a:hover {
+  color: var(--color-primary-hover);
+}
+
+/* Mobile spacing tighten-up */
+@media (max-width: 640px) {
+  .guide-content > section + section {
+    margin-top: var(--space-10);
+  }
+}
 
 /* --- Resource Shell --- */
 .resource-grid {
