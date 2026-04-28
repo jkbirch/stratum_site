@@ -68,21 +68,21 @@
         <div class="card feature-card fade-in">
           <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
           <h3>Essential Asset Watch</h3>
-          <p>The baseline recurring program. Annual or semi-annual visual inspection of roofs and primary exterior assets, with a severity-rated defect log and a CMMS-ready findings file delivered after each cycle.</p>
+          <p>The baseline recurring program. Annual or semi-annual visual inspection of roofs and primary exterior assets, with a severity-rated defect log and a structured findings deliverable (PDF and CSV) after each flight.</p>
           <a href="#essential-asset-watch" class="btn btn-outline mt-4">Program Details</a>
         </div>
 
         <div class="card feature-card fade-in">
           <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"/></svg>
           <h3>Critical Asset Assurance</h3>
-          <p>Quarterly visual and thermal program on the assets where failure is most expensive. Severity ratings, trend reporting, 24-hour critical finding notification, and CMMS-ready work orders every cycle.</p>
+          <p>Quarterly visual and thermal program on the assets where failure is most expensive. Severity ratings, trend reporting, an S1 alert within 4 hours with a written action summary within 24 hours, and a CMMS-ready import file after each flight.</p>
           <a href="#critical-asset-assurance" class="btn btn-outline mt-4">Program Details</a>
         </div>
 
         <div class="card feature-card fade-in">
           <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
           <h3>Reliability Program</h3>
-          <p>Managed inspection program with CMMS integration. Stratum scopes the asset register, runs the cadence, ingests findings into your maintenance system, and reviews program performance with you each cycle.</p>
+          <p>Managed inspection program with direct CMMS integration. Stratum scopes the asset register, runs the cadence, ingests findings via API or managed feed, and reviews program performance with you each cycle.</p>
           <a href="#reliability-program" class="btn btn-outline mt-4">Program Details</a>
         </div>
       </div>
@@ -96,7 +96,7 @@
         <div class="fade-in">
           <p class="overline">Program 01</p>
           <h2>Essential Asset Watch</h2>
-          <p style="color:var(--color-text-muted);margin-top:var(--space-3);"><strong>A recurring visual inspection program for the assets every facility manager is already accountable for.</strong> Annual or semi-annual cycles, severity-rated findings, and a structured deliverable that your CMMS can ingest — without standing up a full reliability function.</p>
+          <p style="color:var(--color-text-muted);margin-top:var(--space-3);"><strong>A recurring visual inspection program for the assets every facility manager is already accountable for.</strong> Annual or semi-annual cycles, severity-rated findings, and a structured deliverable your team can read and your maintenance staff can act on &mdash; without standing up a full reliability function.</p>
 
           <div style="margin-top:var(--space-4);display:flex;flex-direction:column;gap:var(--space-3);">
             <div>
@@ -109,7 +109,11 @@
             </div>
             <div>
               <h4>What You Get</h4>
-              <p style="color:var(--color-text-muted);font-size:var(--text-sm);">Severity-rated defect log, georeferenced photo evidence, condition score, and a CMMS-ready findings file with asset tags, location codes, and recommended priorities.</p>
+              <p style="color:var(--color-text-muted);font-size:var(--text-sm);">Severity-rated defect log, georeferenced photo evidence, condition score, and a structured findings deliverable in PDF and CSV with asset tags, location codes, and recommended priorities. No CMMS API integration at this tier &mdash; the file is built to be read directly or imported manually.</p>
+            </div>
+            <div>
+              <h4>Critical Finding SLA</h4>
+              <p style="color:var(--color-text-muted);font-size:var(--text-sm);">Within report cycle. Findings are delivered with the inspection report.</p>
             </div>
             <div>
               <h4>Best Fit</h4>
@@ -136,7 +140,7 @@
         <div class="fade-in">
           <p class="overline">Program 02</p>
           <h2>Critical Asset Assurance</h2>
-          <p style="color:var(--color-text-muted);margin-top:var(--space-3);"><strong>A quarterly visual and thermal inspection program for assets where unplanned failure is the dominant operational risk.</strong> Severity ratings, trend reporting across cycles, and a 24-hour notification path on critical findings — built so your maintenance team is the first to know, not the last.</p>
+          <p style="color:var(--color-text-muted);margin-top:var(--space-3);"><strong>A quarterly visual and thermal inspection program for assets where unplanned failure is the dominant operational risk.</strong> Severity ratings, trend reporting across cycles, and a critical-finding alert path built so your maintenance team is the first to know, not the last.</p>
 
           <div style="margin-top:var(--space-4);display:flex;flex-direction:column;gap:var(--space-3);">
             <div>
@@ -149,7 +153,11 @@
             </div>
             <div>
               <h4>What You Get</h4>
-              <p style="color:var(--color-text-muted);font-size:var(--text-sm);">Visual + thermal findings, severity ratings, trend reporting across cycles, 24-hour critical finding notification, CMMS-ready work order records every cycle.</p>
+              <p style="color:var(--color-text-muted);font-size:var(--text-sm);">Visual + thermal findings, severity ratings, trend reporting across cycles, and a CMMS-ready import file (structured findings + work orders) so records flow into Maximo, FIIX, UpKeep, Microsoft Dynamics 365, SAP, or comparable systems with minimal manual handling.</p>
+            </div>
+            <div>
+              <h4>Critical Finding SLA</h4>
+              <p style="color:var(--color-text-muted);font-size:var(--text-sm);">S1 alert within 4 hours. Written action summary within 24 hours. Standard cycle reporting follows on schedule.</p>
             </div>
             <div>
               <h4>Best Fit</h4>
@@ -170,12 +178,12 @@
         <div class="fade-in">
           <p class="overline">Program 03</p>
           <h2>Reliability Program</h2>
-          <p style="color:var(--color-text-muted);margin-top:var(--space-3);"><strong>A managed inspection program with CMMS integration.</strong> Stratum scopes the asset register, sets cadence per asset class, ingests findings directly into your maintenance system, and reviews trends and program performance with you every cycle. This is the program for organizations replacing ad-hoc inspection spend with a planned reliability function.</p>
+          <p style="color:var(--color-text-muted);margin-top:var(--space-3);"><strong>A managed inspection program with direct CMMS integration.</strong> Stratum scopes the asset register, sets cadence per asset class, ingests findings directly into your maintenance system via API or managed feed, and reviews trends and program performance with you every cycle. This is the program for organizations replacing ad-hoc inspection spend with a planned reliability function.</p>
 
           <div style="margin-top:var(--space-4);display:flex;flex-direction:column;gap:var(--space-3);">
             <div>
               <h4>Target Assets</h4>
-              <p style="color:var(--color-text-muted);font-size:var(--text-sm);">Multiple asset classes across one or more sites — roofs, overhead structures, crane runways, elevated systems, solar arrays, tanks, facades, rooftop mechanical infrastructure, stormwater assets.</p>
+              <p style="color:var(--color-text-muted);font-size:var(--text-sm);">Multiple asset classes across one or more sites &mdash; roofs, overhead structures, crane runways, elevated systems, solar arrays, tanks, facades, rooftop mechanical infrastructure, stormwater assets.</p>
             </div>
             <div>
               <h4>Cadence</h4>
@@ -183,7 +191,11 @@
             </div>
             <div>
               <h4>What You Get</h4>
-              <p style="color:var(--color-text-muted);font-size:var(--text-sm);">Direct CMMS integration (IBM Maximo, Microsoft Dynamics 365, FIIX, UpKeep, SAP, or comparable), trended condition history, scheduled program review meetings, and a single accountable point of contact for inspection operations.</p>
+              <p style="color:var(--color-text-muted);font-size:var(--text-sm);">Direct API or managed CMMS feed (IBM Maximo, Microsoft Dynamics 365, FIIX, UpKeep, SAP, or comparable), trended condition history, scheduled program review meetings, and a single accountable point of contact for inspection operations.</p>
+            </div>
+            <div>
+              <h4>Critical Finding SLA</h4>
+              <p style="color:var(--color-text-muted);font-size:var(--text-sm);">Contract-defined by asset tier &mdash; for example, 24 hours for Tier 1 assets, 48&ndash;72 hours for Tier 2, with route-of-record alerting through the integration.</p>
             </div>
             <div>
               <h4>Best Fit</h4>
@@ -252,21 +264,21 @@
             </tr>
             <tr>
               <td>Defect log</td>
-              <td>Per cycle</td>
-              <td>Per cycle</td>
-              <td class="highlight-col">Per cycle, trended</td>
+              <td>Per flight</td>
+              <td>Per flight</td>
+              <td class="highlight-col">Per flight, trended</td>
             </tr>
             <tr>
               <td>CMMS-ready output</td>
-              <td>Structured findings file</td>
-              <td>Structured findings + work orders</td>
-              <td class="highlight-col">Direct CMMS integration</td>
+              <td>Structured findings file (CSV/PDF)</td>
+              <td>CMMS-ready import file (structured findings + work orders)</td>
+              <td class="highlight-col">Direct API or managed CMMS feed</td>
             </tr>
             <tr>
-              <td>Critical finding notification</td>
+              <td>Critical finding SLA</td>
               <td>Within report cycle</td>
-              <td>24-hour notification</td>
-              <td class="highlight-col">24-hour notification</td>
+              <td>S1 alert within 4 hours; action summary within 24 hours</td>
+              <td class="highlight-col">Contract-defined by asset tier (e.g., 24 hr Tier 1, 48&ndash;72 hr Tier 2)</td>
             </tr>
             <tr>
               <td>Trend reporting</td>
@@ -282,8 +294,8 @@
             </tr>
             <tr>
               <td>Integration depth</td>
-              <td>Findings file (CSV/JSON)</td>
-              <td>Findings file + structured work orders</td>
+              <td>Structured findings file (CSV/PDF)</td>
+              <td>CMMS-ready import file</td>
               <td class="highlight-col">Direct API or managed CMMS feed</td>
             </tr>
             <tr>
@@ -326,7 +338,7 @@
         </div>
         <div class="card fade-in">
           <h3>CMMS Integration Depth</h3>
-          <p style="color:var(--color-text-muted);font-size:var(--text-sm);margin-top:var(--space-2);">Structured findings file, structured work order records, or direct CMMS API feed. Pricing reflects the integration build and the ongoing operation of that pipeline.</p>
+          <p style="color:var(--color-text-muted);font-size:var(--text-sm);margin-top:var(--space-2);">Structured findings file (CSV/PDF), CMMS-ready import file, or direct API / managed CMMS feed. Pricing reflects the integration build and the ongoing operation of that pipeline.</p>
         </div>
         <div class="card fade-in">
           <h3>Program Review</h3>
