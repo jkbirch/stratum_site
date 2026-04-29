@@ -915,14 +915,14 @@ h4 { font-size: var(--text-base); font-weight: 600; }
   color: var(--color-text);
 }
 
-.guide-content a {
+.guide-content a:not(.btn) {
   color: var(--color-primary);
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 2px;
 }
 
-.guide-content a:hover {
+.guide-content a:not(.btn):hover {
   color: var(--color-primary-hover);
 }
 
