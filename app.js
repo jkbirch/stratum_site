@@ -251,24 +251,58 @@ if (mobileNav && menuBtn) {
     }
   })();
 
-  // --- Contact Form (no backend, just UX) ---
-  /*
-  const contactForm = document.querySelector('#contact-form');
+  // --- Contact Form: fetch-based submission with validation ---
+  var contactForm = document.querySelector('#contact-form');
   if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
       e.preventDefault();
-      const btn = contactForm.querySelector('button[type="submit"]');
-      const originalText = btn.textContent;
-      btn.textContent = 'Message Sent';
+
+      // Validate required fields
+      var requiredFields = contactForm.querySelectorAll('[required]');
+      var valid = true;
+      requiredFields.forEach(function(field) {
+        field.style.outline = '';
+        if (!field.value.trim()) {
+          field.style.outline = '2px solid var(--color-error, #e53e3e)';
+          valid = false;
+        }
+      });
+      if (!valid) {
+        var firstInvalid = contactForm.querySelector('[required][style*="outline"]');
+        if (firstInvalid) firstInvalid.focus();
+        return;
+      }
+
+      var btn = contactForm.querySelector('button[type="submit"]');
+      var originalText = btn.textContent;
+      btn.textContent = 'Sending…';
       btn.disabled = true;
-      btn.style.opacity = '0.7';
-      setTimeout(function() {
+
+      var formData = new FormData(contactForm);
+
+      fetch(contactForm.action, {
+        method: 'POST',
+        body: formData
+      })
+      .then(function(res) {
+        if (res.ok || res.redirected) {
+          window.location.href = 'https://www.stratumassetintelligence.com/thank-you.html';
+        } else {
+          throw new Error('Submission failed');
+        }
+      })
+      .catch(function() {
         btn.textContent = originalText;
         btn.disabled = false;
-        btn.style.opacity = '1';
-        contactForm.reset();
-      }, 3000);
+        var errMsg = contactForm.querySelector('.form-error-msg');
+        if (!errMsg) {
+          errMsg = document.createElement('p');
+          errMsg.className = 'form-error-msg';
+          errMsg.style.cssText = 'color:var(--color-error,#e53e3e);font-size:var(--text-sm);margin-top:var(--space-2);';
+          btn.parentNode.insertBefore(errMsg, btn.nextSibling);
+        }
+        errMsg.textContent = 'Something went wrong. Please try again or email sales@stratumassetintelligence.com directly.';
+      });
     });
   }
-*/
 })();
