@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stratum Connector — The Workflow Layer Your In-House Drone Program Is Missing</title>
+<meta name="description" content="Stratum Connector is the bolt-on data bridge for in-house drone inspection programs. We close the seam between inspection output and your CMMS — Maximo, SAP PM, Fiix, Dynamics 365, and more.">
+<meta property="og:title" content="Stratum Connector — Bolt-On for In-House Drone Programs">
+<meta property="og:description" content="You built the program. We close the seam between inspection output and work order.">
+<meta property="og:type" content="website">
+
+<link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&f[]=satoshi@400,500,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./base.css?v=2">
+<link rel="stylesheet" href="./style.css?v=2">
+</head>
+<body>
+
+<!-- Skip Link -->
+<a href="#main" class="sr-only" style="position:fixed;top:0;left:0;z-index:100;padding:var(--space-3);background:var(--color-primary);color:#fff;">Skip to content</a>
+
+<!-- Header -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="./index.html" class="header-brand">
+      <span class="header-brand-name">Stratum Asset Intelligence</span>
+      <span class="header-brand-tagline">Recurring Drone Inspection Programs for Facility Operations</span>
+    </a>
+
+    <nav class="nav-desktop" aria-label="Main navigation">
+      <a href="./index.html" class="nav-link">Home</a>
+      <a href="./services.html" class="nav-link">Inspection Programs</a>
+      <a href="./why-stratum.html" class="nav-link">Why Stratum</a>
+      <a href="./how-programs-are-scoped.html" class="nav-link">How We Scope</a>
+      <a href="./connector.html" class="nav-link" aria-current="page">Connector</a>
+      <a href="./resources.html" class="nav-link">Resources</a>
+      <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme"></button>
+      <a href="./contact.html" class="btn btn-primary nav-cta">Contact</a>
+    </nav>
+
+    <div style="display:flex;align-items:center;gap:var(--space-2);">
+      <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme" style="display:none;"></button>
+      <button class="mobile-menu-btn"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        data-state="closed">
+        <span class="mobile-menu-icon" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2">
+            <path d="M3 12h18M3 6h18M3 18h18"/>
+          </svg>
+        </span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<nav class="mobile-nav is-closed" aria-label="Mobile navigation">
+  <a href="./index.html" class="nav-link">Home</a>
+  <a href="./services.html" class="nav-link">Inspection Programs</a>
+  <a href="./why-stratum.html" class="nav-link">Why Stratum</a>
+  <a href="./how-programs-are-scoped.html" class="nav-link">How We Scope</a>
+  <a href="./connector.html" class="nav-link" aria-current="page">Connector</a>
+  <a href="./resources.html" class="nav-link">Resources</a>
+  <a href="./contact.html" class="btn btn-primary">Contact</a>
+</nav>
+
+<main id="main">
+
+  <!-- Hero -->
+  <section class="page-header">
+    <div class="container">
+      <p class="overline">For In-House Drone Programs</p>
+      <h1>The workflow layer your in-house drone program is missing.</h1>
+      <p>You built the program. You bought the hardware. You hired or certified the pilots. You defined the scope and the cadence. <strong>Stratum Connector closes the seam between inspection output and work order</strong> — so the program produces preventive maintenance, not PDFs.</p>
+      <div class="hero-actions" style="margin-top:var(--space-6);display:flex;flex-wrap:wrap;gap:var(--space-3);">
+        <a href="./contact.html?program=design-partner" class="btn btn-primary btn-lg">Become a Design Partner</a>
+        <a href="#how-it-works" class="btn btn-outline btn-lg">See How It Works</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem framing -->
+  <section class="section">
+    <div class="container">
+      <div class="two-col">
+        <div class="fade-in">
+          <p class="overline">The Problem</p>
+          <h2>You built the program. Where does the data go?</h2>
+          <p style="color:var(--color-text-muted);margin-top:var(--space-3);">You made the case for an in-house drone program and got it funded. You bought the hardware. You hired or certified the pilots. Your reliability engineers wrote the flight plans and set the cadence. Capture is solved.</p>
+          <p style="color:var(--color-text-muted);margin-top:var(--space-3);">Then the data hits the wall. JPEGs land in SharePoint. PDFs pile up in shared drives. A planner spends six hours retyping a roof report into Maximo — when they get to it at all. The drone program produced inspection data; the CMMS never heard about it.</p>
+          <p style="color:var(--color-text-muted);margin-top:var(--space-3);"><strong>The piece that's missing is action</strong> — the bridge from finding to work order, from JPEG to service request, from flight log to system of record.</p>
+        </div>
+
+        <div class="fade-in" style="display:flex;flex-direction:column;gap:var(--space-3);">
+          <div class="card" style="padding:var(--space-5);">
+            <p style="font-style:italic;color:var(--color-text);"><span style="color:var(--color-primary);">&ldquo;</span>Nobody scoped the part where the data has to land in Maximo. We just assumed the pilots would handle it.<span style="color:var(--color-primary);">&rdquo;</span></p>
+            <p class="overline" style="margin-top:var(--space-3);">Reliability Manager, Petrochemical</p>
+          </div>
+          <div class="card" style="padding:var(--space-5);">
+            <p style="font-style:italic;color:var(--color-text);"><span style="color:var(--color-primary);">&ldquo;</span>My planner spent six hours retyping a 47-page roof report. By the time the work orders existed, the next inspection was already scheduled.<span style="color:var(--color-primary);">&rdquo;</span></p>
+            <p class="overline" style="margin-top:var(--space-3);">Maintenance Director, Heavy Manufacturing</p>
+          </div>
+          <div class="card" style="padding:var(--space-5);">
+            <p style="font-style:italic;color:var(--color-text);"><span style="color:var(--color-primary);">&ldquo;</span>Eight quarters of PDFs in SharePoint. No trend data. No defensible record when the insurer asked.<span style="color:var(--color-primary);">&rdquo;</span></p>
+            <p class="overline" style="margin-top:var(--space-3);">Asset Integrity Lead, Utility</p>
+          </div>
+          <div class="card" style="padding:var(--space-5);">
+            <p style="font-style:italic;color:var(--color-text);"><span style="color:var(--color-primary);">&ldquo;</span>The CFO is going to ask what the drone program produced this year. I can show flight hours. I can't show work orders.<span style="color:var(--color-primary);">&rdquo;</span></p>
+            <p class="overline" style="margin-top:var(--space-3);">Plant Manager, Power Generation</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gap table -->
+  <section class="section" style="background:var(--color-surface);">
+    <div class="container">
+      <div class="section-header fade-in">
+        <p class="overline">The Gap</p>
+        <h2>What you've built. What's still missing.</h2>
+        <p>Most in-house programs over-invest in capture and under-invest in action. That's the gap Stratum closes.</p>
+      </div>
+
+      <div class="comparison-table card fade-in" style="padding:0;overflow:hidden;">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:50%;">What a mature in-house program has</th>
+              <th style="width:50%;" class="highlight-col">What it almost never has</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Part 107 certified pilots, in-house</td>
+              <td class="highlight-col">Asset matching from image to asset ID</td>
+            </tr>
+            <tr>
+              <td>Drone hardware (Mavic, Matrice, M30T, M350)</td>
+              <td class="highlight-col">Severity-to-priority translation per asset class</td>
+            </tr>
+            <tr>
+              <td>Defined inspection scope and cadence</td>
+              <td class="highlight-col">Failure-code mapping into the CMMS catalog</td>
+            </tr>
+            <tr>
+              <td>Reliability-driven flight planning</td>
+              <td class="highlight-col">Service-request push (MXSR, SAP PI/PO, Fiix REST)</td>
+            </tr>
+            <tr>
+              <td>Processing platform (Pix4D, WebODM, DroneDeploy)</td>
+              <td class="highlight-col">Closed-loop completion feedback from CMMS</td>
+            </tr>
+            <tr>
+              <td>SOPs and inspection cadence documentation</td>
+              <td class="highlight-col">Trend reporting and defensible condition history</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p style="color:var(--color-text-muted);margin-top:var(--space-6);text-align:center;max-width:72ch;margin-inline:auto;">
+        The left column is where the budget goes. The right column is where the value gets realized &mdash;
+        or doesn't. Capture has outrun action.
+      </p>
+    </div>
+  </section>
+
+  <!-- Bolt-on diagram -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <p class="overline">What Stratum Is</p>
+        <h2>Stratum is the bolt-on.</h2>
+        <p>We don't replace your pilots, your hardware, your processing platform, or your reliability engineers' flight plans. We complete the program by closing the seam between inspection output and work order.</p>
+      </div>
+
+      <div class="card fade-in" style="padding:var(--space-10) var(--space-6);overflow-x:auto;">
+        <svg viewBox="0 0 1000 280" style="width:100%;height:auto;max-width:1000px;margin:0 auto;display:block;" role="img" aria-label="Flow diagram: Drone Capture (yours) connects to Processing Platform (yours), which connects through Stratum Connector (us) to your CMMS (yours).">
+          <defs>
+            <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+              <path d="M0,0 L10,5 L0,10 z" fill="var(--color-primary)"/>
+            </marker>
+          </defs>
+          <!-- Boxes -->
+          <g font-family="General Sans, sans-serif">
+            <!-- Drone Capture -->
+            <rect x="20" y="80" width="180" height="100" rx="8" fill="var(--color-surface)" stroke="var(--color-border)" stroke-width="1.5"/>
+            <text x="110" y="120" text-anchor="middle" font-size="16" font-weight="600" fill="var(--color-text)">Drone Capture</text>
+            <text x="110" y="145" text-anchor="middle" font-size="12" fill="var(--color-text-muted)">Pilots, hardware,</text>
+            <text x="110" y="162" text-anchor="middle" font-size="12" fill="var(--color-text-muted)">flight plans</text>
+            <text x="110" y="210" text-anchor="middle" font-size="11" font-weight="600" letter-spacing="1.5" fill="var(--color-text-muted)">YOURS</text>
+
+            <!-- Processing -->
+            <rect x="240" y="80" width="180" height="100" rx="8" fill="var(--color-surface)" stroke="var(--color-border)" stroke-width="1.5"/>
+            <text x="330" y="120" text-anchor="middle" font-size="16" font-weight="600" fill="var(--color-text)">Processing Platform</text>
+            <text x="330" y="145" text-anchor="middle" font-size="12" fill="var(--color-text-muted)">Pix4D, WebODM,</text>
+            <text x="330" y="162" text-anchor="middle" font-size="12" fill="var(--color-text-muted)">DroneDeploy</text>
+            <text x="330" y="210" text-anchor="middle" font-size="11" font-weight="600" letter-spacing="1.5" fill="var(--color-text-muted)">YOURS</text>
+
+            <!-- Stratum -->
+            <rect x="460" y="70" width="200" height="120" rx="8" fill="var(--color-primary-light)" stroke="var(--color-primary)" stroke-width="2"/>
+            <text x="560" y="115" text-anchor="middle" font-size="16" font-weight="700" fill="var(--color-primary)">Stratum Connector</text>
+            <text x="560" y="140" text-anchor="middle" font-size="12" fill="var(--color-text)">Ingest &middot; Normalize</text>
+            <text x="560" y="157" text-anchor="middle" font-size="12" fill="var(--color-text)">Push</text>
+            <text x="560" y="210" text-anchor="middle" font-size="11" font-weight="700" letter-spacing="1.5" fill="var(--color-primary)">US</text>
+
+            <!-- CMMS -->
+            <rect x="700" y="80" width="180" height="100" rx="8" fill="var(--color-surface)" stroke="var(--color-border)" stroke-width="1.5"/>
+            <text x="790" y="120" text-anchor="middle" font-size="16" font-weight="600" fill="var(--color-text)">Your CMMS</text>
+            <text x="790" y="145" text-anchor="middle" font-size="12" fill="var(--color-text-muted)">Maximo, SAP PM,</text>
+            <text x="790" y="162" text-anchor="middle" font-size="12" fill="var(--color-text-muted)">Fiix, Dynamics 365</text>
+            <text x="790" y="210" text-anchor="middle" font-size="11" font-weight="600" letter-spacing="1.5" fill="var(--color-text-muted)">YOURS</text>
+
+            <!-- Arrows -->
+            <line x1="200" y1="130" x2="240" y2="130" stroke="var(--color-primary)" stroke-width="2" marker-end="url(#arrow)"/>
+            <line x1="420" y1="130" x2="460" y2="130" stroke="var(--color-primary)" stroke-width="2" marker-end="url(#arrow)"/>
+            <line x1="660" y1="130" x2="700" y2="130" stroke="var(--color-primary)" stroke-width="2" marker-end="url(#arrow)"/>
+
+            <!-- Feedback loop -->
+            <path d="M 790 180 Q 790 250 560 250 Q 460 250 460 190" fill="none" stroke="var(--color-primary)" stroke-width="1.5" stroke-dasharray="4 4" marker-end="url(#arrow)"/>
+            <text x="625" y="270" text-anchor="middle" font-size="11" font-style="italic" fill="var(--color-text-muted)">completion feedback</text>
+          </g>
+        </svg>
+      </div>
+
+      <p style="color:var(--color-text-muted);margin-top:var(--space-6);text-align:center;max-width:72ch;margin-inline:auto;">
+        We sell the seam &mdash; not the drone, not the analytics model, not the CMMS license.
+        Everything you already invested in keeps doing what it does. Stratum makes it produce work orders.
+      </p>
+    </div>
+  </section>
+
+  <!-- How it works — three-layer ingest -->
+  <section class="section" id="how-it-works" style="background:var(--color-surface);">
+    <div class="container">
+      <div class="section-header text-center fade-in" style="margin-inline:auto;">
+        <p class="overline">How It Works</p>
+        <h2>Three layers. One pipeline.</h2>
+        <p style="margin-inline:auto;">Inspection output enters Stratum from anywhere. It leaves as a structured, source-tagged record in your CMMS.</p>
+      </div>
+
+      <div class="process-steps">
+        <div class="process-step card fade-in">
+          <div class="step-number">01</div>
+          <h3>Ingest</h3>
+          <p>Connectors for DroneDeploy, Pix4D, WebODM, Zeitview, DJI FlightHub, and Skydio Cloud. Direct ingest from shared drives (SharePoint, OneDrive, Google Drive, Dropbox) and thumb-drive uploads. <strong>PDF parsing via OCR plus structured extraction and human-in-the-loop validation on first ingest</strong> per processor — so we don't promise magic on documents we haven't seen before. EXIF metadata extraction (GPS, timestamp, altitude, sensor type) on every image.</p>
+        </div>
+        <div class="process-step card fade-in">
+          <div class="step-number">02</div>
+          <h3>Normalize</h3>
+          <p>Defect classification mapped to your failure-code catalog. Severity scores translated to your CMMS priority field, tuned per asset class. Asset matching from image to asset ID via location, tag, or visual identification. A <strong>triage queue with human validation</strong> before anything hits the CMMS &mdash; because pushing a garbage work order is worse than pushing none.</p>
+        </div>
+        <div class="process-step card fade-in">
+          <div class="step-number">03</div>
+          <h3>Push</h3>
+          <p>Pre-built connectors with documented field mapping: <strong>IBM Maximo</strong> (MXSR service request, not direct work order), <strong>SAP PM</strong> (PI/PO or CPI middleware, EQUNR + TPLNR aware), <strong>Fiix / Rockwell</strong> (with completion-webhook feedback loop), <strong>eMaint</strong> (storeroom-catalog aware), <strong>UpKeep, MaintainX, Limble</strong> (REST + Zapier/Make compatible), <strong>Dynamics 365 Field Service</strong> (Power Automate + Dataverse native). Every finding gets tagged <code>SOURCE_SYSTEM = STRATUM</code> so you can answer the CFO's question in one query.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why now -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <p class="overline">Why Now</p>
+        <h2>Four signals that the activation gap is about to bite.</h2>
+      </div>
+
+      <div class="feature-grid feature-grid--2">
+        <div class="card feature-card fade-in">
+          <h3><span style="color:var(--color-primary);">01</span>&nbsp;&nbsp;In-house drone programs are becoming the default.</h3>
+          <p>Operators are bringing inspection in-house for cost control, safety ownership, and data sovereignty. The hardware and pilot training are commoditized; the workflow gap is not.</p>
+        </div>
+        <div class="card feature-card fade-in">
+          <h3><span style="color:var(--color-primary);">02</span>&nbsp;&nbsp;Capture has outrun action.</h3>
+          <p>Pilots are flying faster than planners can act. The bottleneck has moved from getting the data to using it.</p>
+        </div>
+        <div class="card feature-card fade-in">
+          <h3><span style="color:var(--color-primary);">03</span>&nbsp;&nbsp;Insurers are about to force the issue.</h3>
+          <p>Major carriers are signaling that defensible inspection records will become a renewal condition on policies above a certain TIV within 24 months. Defensible means traceable inside a system of record.</p>
+        </div>
+        <div class="card feature-card fade-in">
+          <h3><span style="color:var(--color-primary);">04</span>&nbsp;&nbsp;CFOs are asking the hard question.</h3>
+          <p>Year-3 program reviews surface the same question every time: &ldquo;What did the drone program produce?&rdquo; The answer needs to be defects caught and corrected before failure &mdash; preventive maintenance completed, downtime avoided, assets kept in service &mdash; not flight hours logged or PDFs filed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why us -->
+  <section class="section" style="background:var(--color-surface);">
+    <div class="container">
+      <div class="two-col">
+        <div class="fade-in">
+          <p class="overline">Why Us</p>
+          <h2>The connector that powers our Reliability Program, now available standalone.</h2>
+          <p style="color:var(--color-text-muted);margin-top:var(--space-3);"><strong>20+ years architecting enterprise data and systems</strong> &mdash; as project manager, program manager, consultant, technical expert, and solution architect across ERP, WMS, and CMMS deployments. We know how data moves through industrial operations because we've built the systems it lives in.</p>
+          <p style="color:var(--color-text-muted);margin-top:var(--space-3);"><strong>FAA Part 107 certified commercial drone pilot.</strong> We fly inspection programs ourselves &mdash; so the connector isn't a translation of someone else's data, it's built from the planner's seat against the platforms we actually use.</p>
+          <p style="color:var(--color-text-muted);margin-top:var(--space-3);"><strong>Vendor-agnostic by design.</strong> We don't sell drones, analytics models, or CMMS licenses. We don't compete with what you've already built. We sell the seam that makes it work.</p>
+          <a href="./about.html" class="btn btn-outline mt-6">Read the founder bio</a>
+        </div>
+        <div class="fade-in">
+          <div class="card" style="padding:var(--space-6);">
+            <p class="overline">Founding Premise</p>
+            <p style="font-family:var(--font-display);font-size:var(--text-lg);line-height:1.4;margin-top:var(--space-3);color:var(--color-text);">&ldquo;The gap between a drone inspection and a structured CMMS work order is a solvable systems problem &mdash; and the industry hasn't solved it yet.&rdquo;</p>
+            <p class="overline" style="margin-top:var(--space-4);">Justin Birch, Founder</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Design partner CTA -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-banner fade-in">
+        <p class="overline">What We're Asking</p>
+        <h2>We're signing 3&ndash;5 design partners.</h2>
+        <p>We're looking for operators in <strong>petrochemical, power generation, utilities, and heavy manufacturing</strong> who have already stood up an in-house drone program &mdash; pilots, hardware, scope, cadence &mdash; and are now feeling the gap between flight data and work orders.</p>
+        <p style="margin-top:var(--space-3);">If you're still evaluating whether to bring inspection in-house, we're probably six months early for you &mdash; but we'd still welcome the conversation.</p>
+        <a href="./contact.html?program=design-partner" class="btn btn-primary btn-lg">Become a Design Partner</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- What partners get -->
+  <section class="section" style="background:var(--color-surface);">
+    <div class="container">
+      <div class="section-header fade-in">
+        <p class="overline">The Exchange</p>
+        <h2>What design partners get. What we ask for.</h2>
+      </div>
+      <div class="comparison-table card fade-in" style="padding:0;overflow:hidden;">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:50%;">Design partners get</th>
+              <th style="width:50%;" class="highlight-col">In exchange we ask for</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Deep-discount or no-fee access to the first production deployment</td>
+              <td class="highlight-col">Permission to template what we build together as a standard Stratum offering</td>
+            </tr>
+            <tr>
+              <td>Co-development on the connector for your specific CMMS and processing stack</td>
+              <td class="highlight-col">Data rights to use anonymized failure-code mappings and severity translations</td>
+            </tr>
+            <tr>
+              <td>Direct line to the founder &mdash; not a CSM, not a ticket queue</td>
+              <td class="highlight-col">A named technical sponsor on your side (reliability engineer, planner, or IT lead)</td>
+            </tr>
+            <tr>
+              <td>Reference architecture documentation you can show your CFO and your insurer</td>
+              <td class="highlight-col">Quarterly business review &mdash; what's working, what isn't, what's next</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-banner fade-in">
+        <p class="overline">Ready to Talk?</p>
+        <h2>You built the program. Let's finish it.</h2>
+        <p>Tell us about your in-house drone program, the CMMS you're trying to feed, and where the data is getting stuck. We'll walk you through what a Stratum Connector deployment looks like for your stack.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:var(--space-3);justify-content:center;margin-top:var(--space-4);">
+          <a href="./contact.html?program=design-partner" class="btn btn-primary btn-lg">Become a Design Partner</a>
+          <a href="mailto:justin.birch@stratumassetintelligence.com?subject=Stratum%20Connector%20-%20In-House%20Program" class="btn btn-outline btn-lg">Email the Founder</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="footer-brand-name">Stratum Asset Intelligence LLC</span>
+        <span class="footer-brand-tagline">Recurring Drone Inspection Programs for Facility Operations</span>
+        <p>Scheduled drone inspections that feed your maintenance system. Recurring programs with CMMS-ready work orders, owner-operated from Northeast Ohio.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Inspection Programs</h4>
+        <a href="./services.html#essential-asset-watch">Essential Asset Watch</a>
+        <a href="./services.html#critical-asset-assurance">Critical Asset Assurance</a>
+        <a href="./services.html#reliability-program">Reliability Program</a>
+        <a href="./connector.html">Stratum Connector</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="./why-stratum.html">Why Stratum</a>
+        <a href="./how-programs-are-scoped.html">How We Scope</a>
+        <a href="./about.html">About</a>
+        <a href="./industries.html">Industries</a>
+        <a href="./resources.html">Resources</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="./contact.html">Start a Program Conversation</a>
+        <a href="mailto:sales@stratumassetintelligence.com">sales@stratumassetintelligence.com</a>
+        <a href="tel:+12165120667">Northeast Ohio</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; 2026 Stratum Asset Intelligence LLC. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="./app.js?v=2" defer></script>
+</body>
+</html>

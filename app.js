@@ -151,6 +151,21 @@ if (mobileNav && menuBtn) {
     fadeEls.forEach(function(el) { el.classList.add('visible'); });
   }
 
+  // --- Pre-select 'Program of Interest' from ?program= query param ---
+  (function preselectProgram() {
+    var params = new URLSearchParams(window.location.search || '');
+    var program = params.get('program');
+    if (!program) return;
+    var select = document.querySelector('#interest');
+    if (!select) return;
+    for (var i = 0; i < select.options.length; i++) {
+      if (select.options[i].value === program) {
+        select.selectedIndex = i;
+        break;
+      }
+    }
+  })();
+
   // --- Contact Form (no backend, just UX) ---
   /*
   const contactForm = document.querySelector('#contact-form');
