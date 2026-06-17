@@ -25,6 +25,7 @@
       <a href="./services.html" class="nav-link">Inspection Programs</a>
       <a href="./why-stratum.html" class="nav-link">Why Stratum</a>
       <a href="./how-programs-are-scoped.html" class="nav-link">How We Scope</a>
+      <div class="nav-dropdown" data-nav-dropdown><button class="nav-link nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false" type="button">Products<svg class="nav-dropdown-caret" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 4l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="nav-dropdown-menu" role="menu" aria-label="Products"><div class="nav-dropdown-menu-inner"><a href="./connector.html" class="nav-dropdown-item" role="menuitem"><span class="nav-dropdown-item-title">Stratum Connector</span><span class="nav-dropdown-item-desc">For in-house drone programs</span></a></div></div></div>
       <a href="./resources.html" class="nav-link">Resources</a>
       <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme"></button>
       <a href="./contact.html" class="btn btn-primary nav-cta">Contact</a>
@@ -43,7 +44,16 @@
   <a href="./services.html" class="nav-link">Inspection Programs</a>
   <a href="./why-stratum.html" class="nav-link">Why Stratum</a>
   <a href="./how-programs-are-scoped.html" class="nav-link">How We Scope</a>
-  <a href="./resources.html" class="nav-link">Resources</a>
+  <div class="mobile-nav-group" data-mobile-accordion>
+    <button class="nav-link mobile-nav-accordion-trigger" aria-expanded="false" type="button">
+      Products
+      <svg class="nav-dropdown-caret" width="12" height="12" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 4l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="mobile-nav-submenu" hidden>
+      <a href="./connector.html" class="nav-link mobile-nav-subitem">Stratum Connector</a>
+    </div>
+  </div>
+      <a href="./resources.html" class="nav-link">Resources</a>
   <a href="./contact.html" class="btn btn-primary">Contact</a>
 </nav>
 
@@ -206,6 +216,11 @@
           </div>
 
           <a href="./contact.html?program=reliability-program" class="btn btn-primary mt-6">Request a Reliability Program Design Session</a>
+
+          <div style="margin-top:var(--space-6);padding:var(--space-5);background:var(--color-primary-light);border-left:3px solid var(--color-primary);border-radius:var(--radius-md);">
+            <p class="overline" style="color:var(--color-primary);">Running This In-House?</p>
+            <p style="margin-top:var(--space-2);color:var(--color-text);">The connector that powers our Reliability Program is now available standalone for operators with their own pilots, hardware, and processing platform. <a href="./connector.html" style="color:var(--color-primary);font-weight:600;text-decoration:none;">See the Stratum Connector &rarr;</a></p>
+          </div>
         </div>
         <div class="two-col-img fade-in">
           <img src="./assets/images/about.png" alt="CMMS dashboard showing structured drone inspection findings and work orders" loading="lazy" width="1200" height="675">
