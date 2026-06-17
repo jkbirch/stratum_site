@@ -31,7 +31,7 @@
       <a href="./services.html" class="nav-link">Inspection Programs</a>
       <a href="./why-stratum.html" class="nav-link">Why Stratum</a>
       <a href="./how-programs-are-scoped.html" class="nav-link">How We Scope</a>
-      <a href="./connector.html" class="nav-link" aria-current="page">Connector</a>
+      <div class="nav-dropdown" data-nav-dropdown><button class="nav-link nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false" type="button">Products<svg class="nav-dropdown-caret" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 4l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="nav-dropdown-menu" role="menu" aria-label="Products"><a href="./connector.html" class="nav-dropdown-item" role="menuitem" aria-current="page"><span class="nav-dropdown-item-title">Stratum Connector</span><span class="nav-dropdown-item-desc">For in-house drone programs</span></a></div></div>
       <a href="./resources.html" class="nav-link">Resources</a>
       <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme"></button>
       <a href="./contact.html" class="btn btn-primary nav-cta">Contact</a>
@@ -59,7 +59,15 @@
   <a href="./services.html" class="nav-link">Inspection Programs</a>
   <a href="./why-stratum.html" class="nav-link">Why Stratum</a>
   <a href="./how-programs-are-scoped.html" class="nav-link">How We Scope</a>
-  <a href="./connector.html" class="nav-link" aria-current="page">Connector</a>
+  <div class="mobile-nav-group" data-mobile-accordion>
+    <button class="nav-link mobile-nav-accordion-trigger" aria-expanded="true" type="button">
+      Products
+      <svg class="nav-dropdown-caret" width="12" height="12" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 4l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="mobile-nav-submenu">
+      <a href="./connector.html" class="nav-link mobile-nav-subitem" aria-current="page">Stratum Connector</a>
+    </div>
+  </div>
   <a href="./resources.html" class="nav-link">Resources</a>
   <a href="./contact.html" class="btn btn-primary">Contact</a>
 </nav>
@@ -92,21 +100,22 @@
         </div>
 
         <div class="fade-in" style="display:flex;flex-direction:column;gap:var(--space-3);">
+          <p class="overline" style="margin-bottom:var(--space-1);">Four Failure Modes We See</p>
           <div class="card" style="padding:var(--space-5);">
-            <p style="font-style:italic;color:var(--color-text);"><span style="color:var(--color-primary);">&ldquo;</span>Nobody scoped the part where the data has to land in Maximo. We just assumed the pilots would handle it.<span style="color:var(--color-primary);">&rdquo;</span></p>
-            <p class="overline" style="margin-top:var(--space-3);">Reliability Manager, Petrochemical</p>
+            <p class="overline" style="color:var(--color-primary);">01 &nbsp; Activation Was Never Scoped</p>
+            <p style="margin-top:var(--space-2);color:var(--color-text);">Programs get funded on the capture side. The activation side &mdash; how the data lands in Maximo, SAP PM, or Fiix &mdash; is assumed to handle itself. It doesn't.</p>
           </div>
           <div class="card" style="padding:var(--space-5);">
-            <p style="font-style:italic;color:var(--color-text);"><span style="color:var(--color-primary);">&ldquo;</span>My planner spent six hours retyping a 47-page roof report. By the time the work orders existed, the next inspection was already scheduled.<span style="color:var(--color-primary);">&rdquo;</span></p>
-            <p class="overline" style="margin-top:var(--space-3);">Maintenance Director, Heavy Manufacturing</p>
+            <p class="overline" style="color:var(--color-primary);">02 &nbsp; Planners Retype Reports By Hand</p>
+            <p style="margin-top:var(--space-2);color:var(--color-text);">A planner spends most of a workday converting a multi-page inspection report into individual service requests. By the time the work orders exist, the next inspection cycle has already started.</p>
           </div>
           <div class="card" style="padding:var(--space-5);">
-            <p style="font-style:italic;color:var(--color-text);"><span style="color:var(--color-primary);">&ldquo;</span>Eight quarters of PDFs in SharePoint. No trend data. No defensible record when the insurer asked.<span style="color:var(--color-primary);">&rdquo;</span></p>
-            <p class="overline" style="margin-top:var(--space-3);">Asset Integrity Lead, Utility</p>
+            <p class="overline" style="color:var(--color-primary);">03 &nbsp; PDFs Accumulate Without Trend Data</p>
+            <p style="margin-top:var(--space-2);color:var(--color-text);">Eight quarters of inspection PDFs sit in SharePoint. No comparable structure. No defensible condition history when the insurer asks for one.</p>
           </div>
           <div class="card" style="padding:var(--space-5);">
-            <p style="font-style:italic;color:var(--color-text);"><span style="color:var(--color-primary);">&ldquo;</span>The CFO is going to ask what the drone program produced this year. I can show flight hours. I can't show work orders.<span style="color:var(--color-primary);">&rdquo;</span></p>
-            <p class="overline" style="margin-top:var(--space-3);">Plant Manager, Power Generation</p>
+            <p class="overline" style="color:var(--color-primary);">04 &nbsp; Year-3 Reviews Have No Answer For The CFO</p>
+            <p style="margin-top:var(--space-2);color:var(--color-text);">Flight hours logged is not the same as work orders generated. Programs without the second number get cut at the next budget cycle.</p>
           </div>
         </div>
       </div>

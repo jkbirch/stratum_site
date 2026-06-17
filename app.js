@@ -84,8 +84,9 @@ if (menuBtn && mobileNav) {
     }
   });
 
-  // Auto-close when any mobile nav link (or Contact button) is clicked
-  mobileNav.querySelectorAll('.nav-link, .btn').forEach(function(link) {
+  // Auto-close when any mobile nav link (or Contact button) is clicked,
+  // EXCEPT the accordion trigger (which should only expand its submenu).
+  mobileNav.querySelectorAll('.nav-link:not(.mobile-nav-accordion-trigger), .btn').forEach(function(link) {
     link.addEventListener('click', function() {
       setClosedState();
     });
@@ -94,7 +95,7 @@ if (menuBtn && mobileNav) {
 
 // Close mobile nav when a link is clicked
 if (mobileNav && menuBtn) {
-  mobileNav.querySelectorAll('.nav-link, .btn').forEach(function(link) {
+  mobileNav.querySelectorAll('.nav-link:not(.mobile-nav-accordion-trigger), .btn').forEach(function(link) {
     link.addEventListener('click', function() {
       mobileNav.classList.remove('is-open');
       mobileNav.classList.add('is-closed');
@@ -150,6 +151,90 @@ if (mobileNav && menuBtn) {
   } else {
     fadeEls.forEach(function(el) { el.classList.add('visible'); });
   }
+
+  // --- Nav Dropdown (Desktop): click + keyboard support ---
+  document.querySelectorAll('[data-nav-dropdown]').forEach(function(drop) {
+    var trigger = drop.querySelector('.nav-dropdown-trigger');
+    var menu = drop.querySelector('.nav-dropdown-menu');
+    if (!trigger || !menu) return;
+
+    function open() {
+      drop.classList.add('is-open');
+      trigger.setAttribute('aria-expanded', 'true');
+    }
+    function close() {
+      drop.classList.remove('is-open');
+      trigger.setAttribute('aria-expanded', 'false');
+    }
+    function toggle() {
+      if (trigger.getAttribute('aria-expanded') === 'true') close();
+      else open();
+    }
+
+    trigger.addEventListener('click', function(e) {
+      e.stopPropagation();
+      toggle();
+    });
+
+    trigger.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ' || e.key === 'ArrowDown') {
+        e.preventDefault();
+        open();
+        var firstItem = menu.querySelector('.nav-dropdown-item');
+        if (firstItem) firstItem.focus();
+      } else if (e.key === 'Escape') {
+        close();
+      }
+    });
+
+    menu.addEventListener('keydown', function(e) {
+      var items = Array.prototype.slice.call(menu.querySelectorAll('.nav-dropdown-item'));
+      var idx = items.indexOf(document.activeElement);
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        var next = items[(idx + 1) % items.length];
+        if (next) next.focus();
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        var prev = items[(idx - 1 + items.length) % items.length];
+        if (prev) prev.focus();
+      } else if (e.key === 'Escape') {
+        close();
+        trigger.focus();
+      }
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!drop.contains(e.target)) close();
+    });
+  });
+
+  // --- Mobile Nav Accordion ---
+  document.querySelectorAll('[data-mobile-accordion]').forEach(function(group) {
+    var trigger = group.querySelector('.mobile-nav-accordion-trigger');
+    var submenu = group.querySelector('.mobile-nav-submenu');
+    if (!trigger || !submenu) return;
+
+    // Default: expanded on the connector page (aria-expanded="true" already set), collapsed elsewhere
+    var initiallyOpen = trigger.getAttribute('aria-expanded') === 'true';
+    if (initiallyOpen) {
+      submenu.removeAttribute('hidden');
+    } else {
+      submenu.setAttribute('hidden', '');
+    }
+
+    trigger.addEventListener('click', function() {
+      var isOpen = trigger.getAttribute('aria-expanded') === 'true';
+      if (isOpen) {
+        trigger.setAttribute('aria-expanded', 'false');
+        submenu.setAttribute('hidden', '');
+      } else {
+        trigger.setAttribute('aria-expanded', 'true');
+        submenu.removeAttribute('hidden');
+      }
+    });
+  });
 
   // --- Pre-select 'Program of Interest' from ?program= query param ---
   (function preselectProgram() {
