@@ -1,4 +1,15 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/services", "destination": "/product", "permanent": true },
+    { "source": "/services.html", "destination": "/product", "permanent": true },
+    { "source": "/essential-asset-watch", "destination": "https://stratumaerialmedia.com/essential-asset-watch", "permanent": true },
+    { "source": "/critical-asset-assurance", "destination": "/product", "permanent": true },
+    { "source": "/reliability-program", "destination": "/product", "permanent": true },
+    { "source": "/how-programs-are-scoped", "destination": "/how-it-works", "permanent": true },
+    { "source": "/how-programs-are-scoped.html", "destination": "/how-it-works", "permanent": true },
+    { "source": "/connector", "destination": "/product", "permanent": true },
+    { "source": "/connector.html", "destination": "/product", "permanent": true }
+  ]
 }

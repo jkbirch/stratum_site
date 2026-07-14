@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How It Works — Stratum Connector | Drone-to-CMMS Integration</title>
+<meta name="description" content="How the Stratum Connector works: ingest any drone platform's export, map detection classes to CMMS failure codes and priorities, push native service requests and work orders, and close the loop with completion feedback.">
+<meta property="og:title" content="How the Stratum Connector Works">
+<meta property="og:description" content="Ingest. Map. Push. Close the loop. The technical pipeline behind the drone-to-CMMS integration platform.">
+<meta property="og:type" content="website">
+
+<link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&f[]=satoshi@400,500,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./base.css?v=2">
+<link rel="stylesheet" href="./style.css?v=2">
+</head>
+<body>
+
+<a href="#main" class="sr-only" style="position:fixed;top:0;left:0;z-index:100;padding:var(--space-3);background:var(--color-primary);color:#fff;">Skip to content</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="./index.html" class="header-brand">
+      <span class="header-brand-name">Stratum Asset Intelligence</span>
+      <span class="header-brand-tagline">The drone-to-CMMS integration platform</span>
+    </a>
+        <nav class="nav-desktop" aria-label="Main navigation">
+      <a href="./index.html" class="nav-link">Home</a>
+      <a href="./product.html" class="nav-link">Product</a>
+      <a href="./how-it-works.html" class="nav-link active" aria-current="page">How It Works</a>
+      <a href="./industries.html" class="nav-link">For Whom</a>
+      <a href="./resources.html" class="nav-link">Resources</a>
+      <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme"></button>
+      <a href="./contact.html" class="btn btn-primary nav-cta">Contact</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:var(--space-2);">
+      <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme" style="display:none;"></button>
+      <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<nav class="mobile-nav is-closed" aria-label="Mobile navigation">
+  <a href="./index.html" class="nav-link">Home</a>
+  <a href="./product.html" class="nav-link">Product</a>
+  <a href="./how-it-works.html" class="nav-link active" aria-current="page">How It Works</a>
+  <a href="./industries.html" class="nav-link">For Whom</a>
+  <a href="./resources.html" class="nav-link">Resources</a>
+  <a href="./contact.html" class="btn btn-primary">Contact</a>
+</nav>
+
+<main id="main">
+
+  <section class="page-header">
+    <div class="container">
+      <p class="overline"><a href="./index.html" style="color:var(--color-text-muted);text-decoration:none;">Home</a> &nbsp;/&nbsp; How It Works</p>
+      <h1>How the Stratum Connector actually works.</h1>
+      <p>The drone-to-CMMS integration platform, end to end. Any drone platform in. Any CMMS out. We don't fly the drones. We don't replace the CMMS. Here is exactly what happens in between.</p>
+    </div>
+  </section>
+
+  <!-- Pipeline overview -->
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="card fade-in" style="max-width:900px;margin:0 auto;">
+        <h2 style="margin-bottom:var(--space-3);">Four stages. One pipeline.</h2>
+        <p style="color:var(--color-text-muted);">Inspection output enters Stratum from any platform. It leaves as a structured, source-tagged record in your system of record &mdash; then the loop closes with completion feedback. Nothing about your capture stack or your CMMS license changes. Stratum is the mapping layer that connects the two.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stage 01: Ingest -->
+  <section class="section">
+    <div class="container">
+      <div class="two-col">
+        <div class="fade-in">
+          <p class="overline" style="color:var(--color-primary);">Stage 01</p>
+          <h2>Ingest &mdash; any drone platform's export format.</h2>
+          <p style="color:var(--color-text-muted);margin-top:var(--space-3);">The connector reads native exports from DroneDeploy, Skydio Cloud, DJI Terra / FlightHub, Pix4D, WebODM, Zeitview, and custom pipelines. Direct ingest from shared drives &mdash; SharePoint, OneDrive, Google Drive, Dropbox &mdash; plus thumb-drive uploads.</p>
+          <p style="color:var(--color-text-muted);margin-top:var(--space-3);">EXIF metadata is extracted from every image: GPS, timestamp, altitude, and sensor type. PDF reports are parsed via OCR plus structured extraction, with human-in-the-loop validation on first ingest per processor &mdash; so we don't promise magic on document formats we haven't seen before.</p>
+        </div>
+        <div class="fade-in">
+          <div class="card" style="padding:var(--space-6);">
+            <p class="overline">Reads From</p>
+            <ul style="margin-top:var(--space-3);color:var(--color-text-muted);line-height:1.9;list-style:none;padding:0;">
+              <li><code>DroneDeploy</code> &middot; orthomosaic + annotations export</li>
+              <li><code>Skydio Cloud</code> &middot; scan + detection API</li>
+              <li><code>DJI Terra / FlightHub</code> &middot; job export</li>
+              <li><code>Pix4D / WebODM</code> &middot; processed outputs</li>
+              <li><code>SharePoint / OneDrive / GDrive</code> &middot; direct pickup</li>
+              <li><code>PDF + JPEG</code> &middot; OCR + EXIF extraction</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stage 02: Map -->
+  <section class="section" style="background:var(--color-surface);">
+    <div class="container">
+      <div class="two-col">
+        <div class="fade-in">
+          <div class="card" style="padding:var(--space-6);">
+            <p class="overline">Mapping Catalog</p>
+            <div class="comparison-table" style="margin-top:var(--space-3);">
+              <table>
+                <thead><tr><th>Drone detection class</th><th class="highlight-col">CMMS mapping</th></tr></thead>
+                <tbody>
+                  <tr><td>Membrane blister / seam split</td><td class="highlight-col">Failure code + P2 priority</td></tr>
+                  <tr><td>Active corrosion (severity 3)</td><td class="highlight-col">Failure code + P1 priority</td></tr>
+                  <tr><td>Thermal anomaly (delta &gt; threshold)</td><td class="highlight-col">Failure code + inspection task</td></tr>
+                  <tr><td>Blocked drain / ponding</td><td class="highlight-col">Failure code + P3 priority</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="fade-in">
+          <p class="overline" style="color:var(--color-primary);">Stage 02</p>
+          <h2>Map &mdash; detection classes to failure codes and priorities.</h2>
+          <p style="color:var(--color-text-muted);margin-top:var(--space-3);">The mapping catalog is the heart of the platform. Each drone-detection class is matched to your CMMS failure-code catalog. Severity scores are translated to your priority field, tuned per asset class &mdash; a P1 on a crane runway is not a P1 on a parapet cap.</p>
+          <p style="color:var(--color-text-muted);margin-top:var(--space-3);">Imagery resolves to a specific asset ID via location, tag, or visual identification against your asset register (EQUNR / TPLNR in SAP, asset + location in Maximo). A human-validated triage queue sits between detection and system of record &mdash; because pushing a garbage work order is worse than pushing none. The catalog compounds: every mapping validated for one deployment strengthens the next.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stage 03: Push -->
+  <section class="section">
+    <div class="container">
+      <div class="two-col">
+        <div class="fade-in">
+          <p class="overline" style="color:var(--color-primary);">Stage 03</p>
+          <h2>Push &mdash; a service request or work order via CMMS-native API.</h2>
+          <p style="color:var(--color-text-muted);margin-top:var(--space-3);">Structured findings become native records through each system's own integration surface &mdash; not a CSV a planner has to import by hand:</p>
+          <ul style="margin-top:var(--space-3);color:var(--color-text-muted);line-height:1.9;">
+            <li><strong>IBM Maximo</strong> &mdash; MXSR service request (not a direct work order), asset + location aware</li>
+            <li><strong>SAP PM</strong> &mdash; PI/PO or CPI middleware, EQUNR + TPLNR aware notifications</li>
+            <li><strong>Fiix / Rockwell</strong> &mdash; REST with a completion-webhook feedback loop</li>
+            <li><strong>Dynamics 365 Field Service</strong> &mdash; Power Automate + Dataverse native</li>
+            <li><strong>ServiceNow</strong> &mdash; incident / request via Table API</li>
+            <li><strong>eMaint, UpKeep, MaintainX, Limble</strong> &mdash; REST + Zapier / Make compatible</li>
+          </ul>
+          <p style="color:var(--color-text-muted);margin-top:var(--space-3);">Every finding is tagged <code>SOURCE_SYSTEM = STRATUM</code> so leadership can answer, in a single query, exactly what the drone program produced.</p>
+        </div>
+        <div class="fade-in">
+          <div class="card" style="padding:var(--space-6);background:var(--color-surface);">
+            <p class="overline">Example Push Payload</p>
+            <pre style="margin-top:var(--space-3);font-size:var(--text-sm);color:var(--color-text);overflow-x:auto;line-height:1.7;"><code>POST /maximo/oslc/os/mxsr
+{
+  "asset_id": "RF-ROOF-04",
+  "location": "BLDG-A/ROOF",
+  "failure_code": "MEM-SPLIT",
+  "priority": 2,
+  "description": "Membrane seam split,
+     NE quadrant, 1.2m",
+  "source_system": "STRATUM",
+  "evidence_url": "https://.../img_0421.jpg"
+}</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stage 04: Close the loop -->
+  <section class="section" style="background:var(--color-surface);">
+    <div class="container">
+      <div class="two-col">
+        <div class="fade-in">
+          <div class="card" style="padding:var(--space-6);">
+            <p class="overline">Closed-Loop Feedback</p>
+            <p style="font-family:var(--font-display);font-size:var(--text-lg);line-height:1.4;margin-top:var(--space-3);color:var(--color-text);">Flight hours logged is not the same as work orders completed. The closed loop is how a drone program answers the CFO's year-three question.</p>
+          </div>
+        </div>
+        <div class="fade-in">
+          <p class="overline" style="color:var(--color-primary);">Stage 04</p>
+          <h2>Close the loop &mdash; completion feedback updates trend data.</h2>
+          <p style="color:var(--color-text-muted);margin-top:var(--space-3);">When the CMMS closes a work order Stratum created, that completion event flows back through the connector. The finding is marked resolved, the asset's condition record updates, and program-level trend data builds across inspection cycles.</p>
+          <p style="color:var(--color-text-muted);margin-top:var(--space-3);">Over time this produces a defensible condition history &mdash; traceable inside the system of record, the kind insurers increasingly require on high-TIV policies. It also closes the accountability gap: for every finding surfaced, you can see whether it became a work order and whether that work order was completed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-banner fade-in">
+        <p class="overline">Design Partner Program</p>
+        <h2>Want the connector wired to your stack?</h2>
+        <p>Tell us your drone platform, your CMMS, and where the data is getting stuck today. We'll walk you through exactly what a Stratum Connector deployment looks like for your ingest format and system of record.</p>
+        <a href="./contact.html?program=design-partner" class="btn btn-primary btn-lg">Become a Design Partner</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="footer-brand-name">Stratum Asset Intelligence LLC</span>
+        <span class="footer-brand-tagline">The drone-to-CMMS integration platform</span>
+        <p>The drone-to-CMMS integration platform. Any drone platform in. Any CMMS out. We turn drone inspection findings into structured work orders in Maximo, SAP PM, Fiix, Dynamics 365, and any enterprise CMMS.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="./product.html">Overview</a>
+        <a href="./how-it-works.html">How It Works</a>
+        <a href="./industries.html">For Whom</a>
+        <a href="./contact.html?program=design-partner">Design Partner Program</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="./why-stratum.html">Why the Integration Layer</a>
+        <a href="./about.html">About</a>
+        <a href="./resources.html">Resources</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="./contact.html?program=design-partner">Become a Design Partner</a>
+        <a href="mailto:sales@stratumassetintelligence.com">sales@stratumassetintelligence.com</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; 2026 Stratum Asset Intelligence LLC. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="./app.js?v=2" defer></script>
+</body>
+</html>

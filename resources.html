@@ -4,7 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Resources — Stratum Asset Intelligence</title>
-<meta name="description" content="Sample deliverables, frequency frameworks, and practical guides for recurring drone inspection programs and CMMS-ready findings.">
+<meta name="description" content="Sample deliverables, mapping frameworks, and practical guides for the drone-to-CMMS integration layer — turning drone inspection findings into structured work orders. Written for enterprise reliability and asset leaders.">
+<meta property="og:title" content="Resources — Stratum Asset Intelligence">
+<meta property="og:description" content="Guides and frameworks for the drone-to-CMMS integration layer.">
+<meta property="og:type" content="website">
 
 <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&f[]=satoshi@400,500,600,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./base.css?v=2">
@@ -18,15 +21,14 @@
   <div class="container header-inner">
     <a href="./index.html" class="header-brand">
       <span class="header-brand-name">Stratum Asset Intelligence</span>
-      <span class="header-brand-tagline">Recurring Drone Inspection Programs for Facility Operations</span>
+      <span class="header-brand-tagline">The drone-to-CMMS integration platform</span>
     </a>
-    <nav class="nav-desktop" aria-label="Main navigation">
+        <nav class="nav-desktop" aria-label="Main navigation">
       <a href="./index.html" class="nav-link">Home</a>
-      <a href="./services.html" class="nav-link">Inspection Programs</a>
-      <a href="./why-stratum.html" class="nav-link">Why Stratum</a>
-      <a href="./how-programs-are-scoped.html" class="nav-link">How We Scope</a>
-      <div class="nav-dropdown" data-nav-dropdown><button class="nav-link nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false" type="button">Products<svg class="nav-dropdown-caret" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 4l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="nav-dropdown-menu" role="menu" aria-label="Products"><div class="nav-dropdown-menu-inner"><a href="./connector.html" class="nav-dropdown-item" role="menuitem"><span class="nav-dropdown-item-title">Stratum Connector</span><span class="nav-dropdown-item-desc">For drone-inspected operations</span></a></div></div></div>
-      <a href="./resources.html" class="nav-link">Resources</a>
+      <a href="./product.html" class="nav-link">Product</a>
+      <a href="./how-it-works.html" class="nav-link">How It Works</a>
+      <a href="./industries.html" class="nav-link">For Whom</a>
+      <a href="./resources.html" class="nav-link active" aria-current="page">Resources</a>
       <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme"></button>
       <a href="./contact.html" class="btn btn-primary nav-cta">Contact</a>
     </nav>
@@ -39,21 +41,12 @@
   </div>
 </header>
 
-<nav class="mobile-nav" aria-label="Mobile navigation">
+<nav class="mobile-nav is-closed" aria-label="Mobile navigation">
   <a href="./index.html" class="nav-link">Home</a>
-  <a href="./services.html" class="nav-link">Inspection Programs</a>
-  <a href="./why-stratum.html" class="nav-link">Why Stratum</a>
-  <a href="./how-programs-are-scoped.html" class="nav-link">How We Scope</a>
-  <div class="mobile-nav-group" data-mobile-accordion>
-    <button class="nav-link mobile-nav-accordion-trigger" aria-expanded="false" type="button">
-      Products
-      <svg class="nav-dropdown-caret" width="12" height="12" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 4l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </button>
-    <div class="mobile-nav-submenu" hidden>
-      <a href="./connector.html" class="nav-link mobile-nav-subitem">Stratum Connector</a>
-    </div>
-  </div>
-      <a href="./resources.html" class="nav-link">Resources</a>
+  <a href="./product.html" class="nav-link">Product</a>
+  <a href="./how-it-works.html" class="nav-link">How It Works</a>
+  <a href="./industries.html" class="nav-link">For Whom</a>
+  <a href="./resources.html" class="nav-link active" aria-current="page">Resources</a>
   <a href="./contact.html" class="btn btn-primary">Contact</a>
 </nav>
 
@@ -62,8 +55,8 @@
   <section class="page-header">
     <div class="container">
       <p class="overline">Resources</p>
-      <h1>Operator-Grade Resources for Inspection Programs</h1>
-      <p>Operator-grade resources for inspection planning, CMMS-ready workflows, and the policy environment shaping commercial drone operations. Written for facility, reliability, and maintenance leaders who need substance, not marketing.</p>
+      <h1>Resources for the Drone-to-CMMS Integration Layer</h1>
+      <p>Sample deliverables, mapping frameworks, CMMS-ready workflows, and the policy environment shaping commercial drone operations. Written for enterprise facility, reliability, and maintenance leaders who need substance, not marketing.</p>
     </div>
   </section>
 
@@ -72,22 +65,22 @@
     <div class="container">
       <div class="section-header fade-in">
         <p class="overline">Sample Deliverables</p>
-        <h2>What a Stratum Inspection Cycle Produces</h2>
-        <p>Concrete examples of the structured findings, severity ratings, and condition records your maintenance team would receive.</p>
+        <h2>What the Connector Produces in Your CMMS</h2>
+        <p>Concrete examples of the structured findings, severity-to-priority mappings, and asset-tagged work orders the connector pushes into your system of record.</p>
       </div>
 
       <div class="resource-grid">
         <div class="card resource-card fade-in">
           <span class="resource-tag">Sample Deliverable</span>
-          <h3>Sample Essential Asset Watch Deliverable</h3>
-          <p>Walk through what a recurring annual roof inspection produces &mdash; severity-rated defect log, georeferenced photo evidence, and the structured PDF/CSV findings file your maintenance team would receive.</p>
+          <h3>Sample Structured Work-Order Push</h3>
+          <p>Walk through what the connector produces &mdash; a severity-rated finding mapped to a CMMS failure code and priority, resolved to an asset ID, and pushed as a native service request with evidence attached.</p>
           <a href="./contact.html?resource=sample-deliverable" class="resource-link">Request a Sample Deliverable <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-7-7l7 7-7 7"/></svg></a>
         </div>
 
         <div class="card resource-card fade-in">
-          <span class="resource-tag">Pilot Summary</span>
-          <h3>Pilot Summary: Baseline Roof and Exterior Asset Assessment</h3>
-          <p>A short, anonymized walk-through of an initial baseline inspection at a Northeast Ohio commercial facility &mdash; what was scoped, what was found, how findings were classified, and how the deliverable was structured for the client's maintenance workflow.</p>
+          <span class="resource-tag">Deployment Summary</span>
+          <h3>Deployment Summary: Drone Findings into an Enterprise CMMS</h3>
+          <p>A short, anonymized walk-through of an initial connector deployment &mdash; the ingest format, how detection classes were mapped to failure codes, how severity translated to priority per asset class, and how findings landed as native records in the system of record.</p>
           <a href="./contact.html?resource=pilot-summary" class="resource-link">Request the Pilot Summary <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-7-7l7 7-7 7"/></svg></a>
         </div>
       </div>
@@ -98,23 +91,23 @@
   <section class="section" style="background:var(--color-surface);">
     <div class="container">
       <div class="section-header fade-in">
-        <p class="overline">Inspection Planning Guides</p>
-        <h2>How to Scope and Run a Recurring Program</h2>
-        <p>Practical guides for setting cadence, defining scope, and connecting drone findings to the systems that drive maintenance work.</p>
+        <p class="overline">Integration Guides</p>
+        <h2>How to Wire Drone Findings Into Your CMMS</h2>
+        <p>Practical guides for mapping detection classes to failure codes, translating severity to priority, and connecting drone findings to the systems that drive maintenance work.</p>
       </div>
 
       <div class="resource-grid">
         <div class="card resource-card fade-in">
           <span class="resource-tag">Framework</span>
-          <h3>Inspection Frequency Framework for Northeast Ohio Facilities</h3>
-          <p>How to set cadence by asset class &mdash; roofs, overhead structures, crane runways, solar, mechanical, and stormwater &mdash; for facilities operating in the Northeast Ohio climate and storm cycle. A reference for building a defensible inspection schedule.</p>
+          <h3>Severity-to-Priority Mapping Framework</h3>
+          <p>How to translate drone-detection severity into CMMS priorities per asset class &mdash; roofs, overhead structures, crane runways, solar, tanks, and mechanical &mdash; so a P1 on a crane runway isn't a P1 on a parapet cap. A reference for building a defensible mapping catalog.</p>
           <a href="./contact.html?resource=frequency-framework" class="resource-link">Request the Framework <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-7-7l7 7-7 7"/></svg></a>
         </div>
 
         <div class="card resource-card fade-in">
           <span class="resource-tag">Technical Brief</span>
           <h3>How CMMS-Ready Drone Findings Become Work Orders</h3>
-          <p>The integration patterns that move a drone-captured defect from a severity-rated finding into a structured work order &mdash; with asset tags, location codes, priority, and trade classification &mdash; inside IBM Maximo, FIIX, UpKeep, or Microsoft Dynamics 365.</p>
+          <p>The integration patterns that move a drone-captured defect from a severity-rated finding into a structured work order &mdash; with asset tags, location codes, priority, and trade classification &mdash; inside IBM Maximo, SAP PM, Fiix, Dynamics 365, or ServiceNow.</p>
           <a href="./contact.html?resource=cmms-workflow" class="resource-link">Request the Brief <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-7-7l7 7-7 7"/></svg></a>
         </div>
 
@@ -159,10 +152,10 @@
   <section class="section" style="background:var(--color-surface);">
     <div class="container">
       <div class="cta-banner fade-in" style="background:transparent;border:none;padding:var(--space-8);">
-        <p class="overline">Get Started</p>
-        <h2>Want a Sample Deliverable for Your Operation?</h2>
-        <p>Tell us about your facility and the assets you're trying to keep ahead of. We'll send back a sample structured deliverable and a short note on the right cadence and integration depth for your operation.</p>
-        <a href="./contact.html" class="btn btn-primary btn-lg">Request a Sample Deliverable</a>
+        <p class="overline">Design Partner Program</p>
+        <h2>Want to See the Connector on Your Stack?</h2>
+        <p>Tell us your CMMS, your drone / processing platform, and where findings get stuck today. We'll send back a sample structured deliverable and a short note on the integration approach for your system of record.</p>
+        <a href="./contact.html?program=design-partner" class="btn btn-primary btn-lg">Become a Design Partner</a>
       </div>
     </div>
   </section>
@@ -174,31 +167,32 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <span class="footer-brand-name">Stratum Asset Intelligence LLC</span>
-        <span class="footer-brand-tagline">Recurring Drone Inspection Programs for Facility Operations</span>
-        <p>Scheduled drone inspections that feed your maintenance system. Recurring programs with CMMS-ready work orders, owner-operated from Northeast Ohio.</p>
+        <span class="footer-brand-tagline">The drone-to-CMMS integration platform</span>
+        <p>The drone-to-CMMS integration platform. Any drone platform in. Any CMMS out. We turn drone inspection findings into structured work orders in Maximo, SAP PM, Fiix, Dynamics 365, and any enterprise CMMS.</p>
       </div>
+
       <div class="footer-col">
-        <h4>Inspection Programs</h4>
-        <a href="./services.html#essential-asset-watch">Essential Asset Watch</a>
-        <a href="./services.html#critical-asset-assurance">Critical Asset Assurance</a>
-        <a href="./services.html#reliability-program">Reliability Program</a>
-        <a href="./services.html">Compare Programs</a>
+        <h4>Product</h4>
+        <a href="./product.html">Overview</a>
+        <a href="./how-it-works.html">How It Works</a>
+        <a href="./industries.html">For Whom</a>
+        <a href="./contact.html?program=design-partner">Design Partner Program</a>
       </div>
+
       <div class="footer-col">
         <h4>Company</h4>
-        <a href="./why-stratum.html">Why Stratum</a>
-        <a href="./how-programs-are-scoped.html">How We Scope</a>
+        <a href="./why-stratum.html">Why the Integration Layer</a>
         <a href="./about.html">About</a>
-        <a href="./industries.html">Industries</a>
         <a href="./resources.html">Resources</a>
       </div>
+
       <div class="footer-col">
         <h4>Contact</h4>
-        <a href="./contact.html">Start a Program Conversation</a>
+        <a href="./contact.html?program=design-partner">Become a Design Partner</a>
         <a href="mailto:sales@stratumassetintelligence.com">sales@stratumassetintelligence.com</a>
-        <a href="tel:+12165120667">Northeast Ohio</a>
       </div>
     </div>
+
     <div class="footer-bottom">
       <span>&copy; 2026 Stratum Asset Intelligence LLC. All rights reserved.</span>
     </div>
